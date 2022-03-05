@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica HTML</title>
+    <style>
+        p {
+            color: blue;
+        }
+
+        label {
+            color: darkblue;
+        }
+
+        body {
+            background-color: azure;
+        }
+
+        .logo {
+            position: absolute;
+            left: 30%;
+        }
+
+        .menu {
+            position: absolute;
+            top: 45%;
+            left: 35%
+        }
+
+        .op {
+            position: absolute;
+            top: 60%;
+            left: 30%
+        }
+
+        .fo {
+            position: absolute;
+            top: 80%;
+            left: 15%
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+        li a:hover {
+            cursor: pointer;
+        }
+
+        #info {
+            font-size: medium;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="logo">
+            <img src="./FrontCake.PNG" alt="FrontCake" width="75%">
+        </div>
+
+    </section>
+    <section>
+        <div class="menu">
+            <h1>Bienvenidos a FrontCaker's</h1>
+        </div>
+    </section>
+    <section>
+        <div class="op">
+            <nav>
+                <ul>
+                    <li><a href="./catalogo.html">
+                            <input type="button" value="Menu">
+                        </a></li>
+                    <li><a href="./pedido.html">
+                            <input type="button" value="Hacer pedido">
+                        </a></li>
+                    <li><a href="./pastelero.html">
+                            <input type="button" value="Pastelero Existencias">
+                        </a></li>
+                    <li><a href="./pedidosPastelero.html">
+                            <input type="button" value="Pastelero Pedidos">
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+    </section>
+
+    <form action="inicio.js">
+
+
+
+    </form>
+</body>
+<footer>
+    <section>
+        <div class="fo">
+            <h3>Sucursal </h3>
+            <p id="info"> Av Univeridad 1710, Local 3
+                Ciudad Chihuahua,
+                Chihuahua, Chih.
+                Tel 614-401-01-01
+                L-S: 9 a.m. a 9 p.m.
+                D: 11 a.m. a 7 p.m. </p>
+        </div>
+
+    </section>
+
+
+</footer>
+
+</html>

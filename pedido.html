@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica HTML</title>
+    <style>
+        p {
+            color: blue;
+        }
+
+        label {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./FrontCake.PNG" alt="FrontCake" width="15%">
+    <h1>Pedidos FrontCaker's</h1>
+    <hr>
+    <form action="pedido.js">
+        <label for="Nombre">Nombre</label><br>
+        <input type="text" id="Nombre" name="Nombre" placeholder="Nombre para tu pedido"><br>
+        <br><br>
+        <label for="Telefono">Telefono</label><br>
+        <input type="tel" id="Telefono" name="Telefono" placeholder="Telefono"><br>
+        <br><br>
+        <label for="Email">Email</label><br>
+        <input type="email" id="Email" name="Email" placeholder="Email"><br>
+        <label for="Descripcion">Descripcion</label><br>
+        <input type="Descripcion" id="Descripcion" name="Descripcion" placeholder="Descripcion"><br>
+        <br><br>
+        <hr>
+        <h2>Sabor del pastel</h2><br>
+        <input type="radio" id="tres" name="sabor" value="tres">
+        <label for="tres">Pastel de tres leches</label><br>
+        <input type="radio" id="chocolate" name="sabor" value="chocolate">
+        <label for="chocolate">Pastel de chocolate</label><br>
+        <input type="radio" id="moka" name="sabor" value="moka">
+        <label for="moka">Pastel moka</label><br>
+        <input type="radio" id="zanahoria" name="sabor" value="zanahoria">
+        <label for="zanahoria">Pastel de zanahoria</label><br><br>
+
+        <hr>
+        <h2>Adornos a elejir los que necesite</h2><br>
+
+        <p>Velas</p>
+        <input type="checkbox" id="Luminosas" name="Luminosa" value="Luminosa">
+        <label for="Luminosa">Luminosas</label>
+        <input type="number" id="LuminosasCuantos" name="LuminosasCuantos" placeholder="¿Cuantas?"><br>
+        <input type="checkbox" id="Numero" name="Numero" value="Numero">
+        <label for="Numero">Con numero</label>
+        <input type="number" id="NumeroCuantos" name="NumeroCuantos" placeholder="¿Cuantas?"><br>
+        <input type="checkbox" id="cera" name="cera" value="cera">
+        <label for="cera">Cajita cera</label>
+        <input type="number" id="ceraCuantos" name="ceraCuantos" placeholder="¿Cuantas?"><br><br>
+
+        <p>Plasticos</p>
+        <input type="checkbox" id="Cucharas" name="Cucharas" value="Cucharas">
+        <label for="Cucharas">Cucharas</label>
+        <input type="number" id="CucharasCuantos" name="CucharasCuantos" placeholder="¿Cuantos?"><br>
+        <input type="checkbox" id="Platos" name="Platos" value="Platos">
+        <label for="Platos">Platos</label>
+        <input type="number" id="PlatosCuantos" name="PlatosCuantos" placeholder="¿Cuantos?"><br><br>
+
+        <p>Globos</p>
+        <input type="checkbox" id="Aluminio" name="Aluminio" value="Aluminio">
+        <label for="Aluminio">Aluminio</label>
+        <input type="number" id="AluminioCuantos" name="AluminioCuantos" placeholder="¿Cuantos?"><br>
+        <input type="checkbox" id="Figuras" name="Figuras" value="Figuras">
+        <label for="Figuras">Figuras</label>
+        <input type="number" id="FigurasCuantos" name="FigurasCuantos" placeholder="¿Cuantos?"><br>
+        <input type="checkbox" id="Colores" name="Colores" value="Colores">
+        <label for="Colores">Colores</label>
+        <input type="number" id="ColoresCuantos" name="ColoresCuantos" placeholder="¿Cuantos?"><br><br>
+
+        <hr>
+        <a href="./index.html">
+            <input type="button" value="Inicio">
+        </a>
+    </form>
+</body>
+
+</html>
