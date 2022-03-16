@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Vaccine</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Poppins:wght@300;400&display=swap"
+        rel="stylesheet" type="text/css" />
+    <!--     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"        type="text/css" /> -->
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .titulo {
+            position: absolute;
+            color: #3151CF;
+            font-size: 40px;
+            top: 5%;
+            left: 15%;
+        }
+
+
+
+        .nav {
+
+            /*background: linear-gradient(to, left, #E7F3FC 50%, white);*/
+            /* background: linear-gradient(to left, #E7F3FC, white 95%, #E7F3FC);*/
+            /* background: linear-gradient(to left, rgba(231, 243, 252, .55),  rgba(231, 243, 252, 50));*/
+            background-color: #E7F3FC;
+            /* fallback color if gradients are not supported */
+            /*background-image: -webkit-linear-gradient(top right, rgba(231, 243, 252, .6) 50%, rgba(231, 243, 252, 1) 100%);
+            /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+            background: linear-gradient(to left, rgba(231, 243, 252, .6) 40%, #ffff 60%);
+            /* For Firefox (3.6 to 15) */
+            /*background-image: -o-linear-gradient(top right, rgba(231, 243, 252, .6) 50%, rgba(231, 243, 252, 1) 100%);
+            /* For old Opera (11.1 to 12.0) */
+            /* background-image: linear-gradient(to bottom right, red, rgba(255, 0, 0, 0));*/
+            /* Standard syntax; must be last */
+        }
+
+        .divAzulbtn {
+
+            background: #3050CE;
+        }
+
+        p {
+            color: #1F3E72;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .subtitulos {
+            padding-left: 10px;
+            padding-top: 75px;
+            padding-bottom: 20px;
+            color: #1F3E72;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .footTitulo {
+            padding-left: 10px;
+            padding-top: 75px;
+            padding-bottom: 20px;
+            color: #1F3E72;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .footTituloPal {
+            padding-left: 10px;
+            padding-top: 75px;
+            padding-bottom: 20px;
+            color: #3151CF;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .fontOptions {
+            color: #1F3E72;
+        }
+
+        .center {
+            padding-top: 30px;
+            padding-left: 80px;
+        }
+
+        .let {
+            padding-left: 10px;
+            color: #8A96A9;
+            padding-bottom: 10px;
+        }
+
+        .letOp {
+            padding-left: 10px;
+            padding-top: 15px;
+            color: #8A96A9;
+            font-size: 10px;
+        }
+
+        .fontJa {
+            color: #1F3E72;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .zindex {
+            z-index: -1;
+        }
+
+        .location {
+
+            width: 20%;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 40%;
+            left: 5%;
+        }
+
+        .date {
+
+            width: 20%;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 40%;
+            left: 30%;
+        }
+
+        .vacine {
+
+            width: 20%;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 40%;
+            left: 55%;
+        }
+
+        .fontJa {
+            color: #1F3E72;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .posJa {
+
+            width: 100%;
+            position: absolute;
+            top: 93%;
+            left: 13%;
+        }
+
+        .posSubmit {
+
+
+            position: absolute;
+            top: 87%;
+            left: 10%;
+        }
+
+        .blank {
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            top: 85%;
+            left: 9%;
+            width: 900px;
+            height: 100px;
+        }
+
+        .blankSubOptions {
+            width: 450px;
+            height: 50px;
+            margin: 5%;
+            padding-top: 10px;
+            padding-left: 65px;
+
+            border: 0.5px solid #f8f8f8;
+            box-shadow: 0 0 4px #D8D8D8;
+            border-radius: 3px;
+            background-color: transparent;
+        }
+
+
+        .blankOp {
+            /* background-color: rgb(2, 255, 255);*/
+            width: 225px;
+            height: 225px;
+            margin: 1%;
+
+            border: 1px solid #f8f8f8;
+            box-shadow: 0 0 4px #D8D8D8;
+            border-radius: 3px;
+            background-color: transparent;
+
+        }
+
+        .blankOp2 {
+            /* background-color: rgb(2, 255, 255);*/
+            width: 240px;
+            height: 225px;
+            margin: 1%;
+
+            border: 1px solid #f8f8f8;
+            box-shadow: 0 0 4px #D8D8D8;
+            border-radius: 3px;
+            background-color: transparent;
+
+        }
+
+        .optionstyle {
+            float: left;
+            padding-top: 15px;
+            padding-left: 5px;
+            padding-bottom: 15px;
+
+        }
+
+        .recta {
+            z-index: 0;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+
+            left: 70%;
+            top: 405%;
+            opacity: .5;
+            border-left: 50px;
+            border-right: 100px solid transparent;
+            border-top: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-bottom: 100px solid #E2E9F9;
+        }
+
+        .triangulo-equilatero-bottom {
+            width: 0;
+            height: 0;
+
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+
+    <nav class="navbar navbar-expand-lg bg-secondary  fixed-top nav" id="mainNav">
+        <div class="container ">
+            <a class="navbar-brand " href="#page-top">Vaccination</a>
+            <button class="navbar-toggler font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#portfolio">Database</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#about">Education</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#contact">News</a></li>
+                    <li class="nav-item mx-0 mx-lg-3"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#contact">Regulation</a></li>
+                    <div class="text-center mt-1">
+                        <a class="btn btn-xl btn-outline-light divAzulbtn" href="">
+                            Hoax Buster
+                        </a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Portfolio Section-->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+
+        </div>
+
+
+
+        </div>
+
+        </div>
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-secondary mb-0"></h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class=""></div>
+            <div class=""><i class=""></i></div>
+            <div class=""></div>
+        </div>
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-center">
+            <!-- Portfolio Item 1-->
+            <div class="form-group">
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="offset-lg-2">
+                            <P>Fight Virus <br>
+                                With Vaccines</P>
+                            <div class=" let">Lest's stop this pandemic by killing the virus<br>
+                                with a vaccine, don't let yourself and your<br>
+                                family get infected</div>
+                            <label></label>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="fontOptions col-sm-4">
+                                        <img src="./img/iconBest.PNG" alt="Best" width="11%">
+                                        <label>Best protection</label>
+                                    </div>
+                                    <div class="fontOptions col-sm-4">
+                                        <img src="./img/iconStar.PNG" alt="Star" width="11%">
+                                        <label>Selected Vaccines</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+
+                            <div class="schedule offset-lg-0">
+                                <img src="./img/IconSchedule.PNG" alt="Schedule" width="4%">
+                                <label>Schedule your vaccinations</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-5 zindex">
+
+                        <img src="./img./doctora.PNG" alt="doctora" width="100%">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="blank">
+                            <div class="location">
+                                <img src="./img/IconLocation.PNG" alt="Location" width="10%">
+                                <label class="let">Location</label>
+                            </div>
+                            <div class="date">
+                                <img src="./img/IconDate.PNG" alt="Date" width="10%">
+                                <label class="let">Date</label>
+                            </div>
+                            <div class="vacine">
+                                <img src="./img/IconVacine.PNG" alt="Date" width="10%">
+                                <label class="let">Vaccine Type</label>
+                            </div>
+                        </div>
+                        <div class="posJa">
+                            <label class="fontJa">Jakarta
+                                Utara</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <label class="fontJa">08 July
+                                2021</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <label class="fontJa">Moderna</label>&nbsp&nbsp
+
+                        </div>
+                        <div class="text-center mt-1 posSubmit">
+                            <a class="btn btn-xl btn-outline-light divAzulbtn" href="">
+                                Submit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row justify-content-center">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-12 offset-lg-2">
+                            <img src="./img/backAstra.PNG" alt="Date" width="70%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row justify-content-center">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 offset-lg-1">
+                            <label class="col-sm-12 subtitulos">Why should I vaccine? </label>
+                            <div class="col-sm-8 let">In order to avoid any doubts about getting the COVID-19
+                                vaccine, identify the following 4 benefits of COVID-19 vaccination :
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <div class="form-group">
+            </div>
+            <div class="form-group">
+            </div>
+            <div class="row justify-content-center">
+
+                <div class="form-group">
+                    <div class="row">
+                        <label class="col-sm-2"></label>
+                        <div class="col-sm-3  offset-lg-1 blankOp ">
+                            <div class="col-sm-10 optionstyle" with:20%>
+                                <img src="./img/IconMini.PNG" alt="mini" width="20%">
+                            </div>
+
+                            <div class="col-sm-9">
+                                <label class="fontOptions">Minimize the spread of viruses</label>
+                            </div>
+
+                            <div class=" col-sm-8 letOp">
+                                Vaccine has been proven effective to prevent someone from getting infected with
+                                Coronavirus
+
+                            </div>
+                        </div>
+                        <div class="col-sm-3  blankOp">
+                            <div class="col-sm-10 optionstyle" with:20%>
+                                <img src="./img/IconForming.PNG" alt="mini" width="20%">
+                            </div>
+
+                            <div class="col-sm-9">
+                                <label class="fontOptions">Formating antibodies</label>
+                            </div>
+
+                            <div class=" col-sm-8 letOp">
+                                COVID-4* vaccine proven to help shape antibody response for immune system
+
+                            </div>
+                        </div>
+                        <div class="col-sm-3 blankOp">
+                            <div class="col-sm-10 optionstyle" with:20%>
+                                <img src="./img/IconProteccion.PNG" alt="mini" width="20%">
+                            </div>
+
+                            <div class="col-sm-9">
+                                <label class="fontOptions">Protecting people nearby</label>
+                            </div>
+
+                            <div class=" col-sm-8 letOp">
+                                The benefits of COVID-19 vaccination are the vaccine that get can also help protect
+                                people around us
+
+                            </div>
+                        </div>
+                        <div class="col-sm-3 blankOp">
+                            <div class="col-sm-10 optionstyle" with:20%>
+                                <img src="./img/IconCreating.PNG" alt="mini" width="20%">
+                            </div>
+
+                            <div class="col-sm-9">
+                                <label class="fontOptions">Creating group immunity</label>
+                            </div>
+
+                            <div class=" col-sm-8 letOp">
+                                COVID-19 vaccination is also beneficial for creating group immunity or herd immunity.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-4  offset-lg-1  ">
+                            <img src="./img/doctora2.PNG" alt="doc2" width="100%">
+                        </div>
+                        <div class="col-sm-6 ">
+                            <label class="col-sm-12 subtitulos">Preparations Before Vaccine </label>
+                            <div class="col-sm-8 let">the success of vaccine is strongly influenced by the
+                                strength of the body's immune system. Therefore, there are
+                                several things that can be tried to make the COVID-19
+                                vaccine work:
+                            </div>
+                            <div class="fontOptions col-sm-12 blankSubOptions">
+                                <img src="./img/Avoid1.PNG" style="text-align: right;" alt="Best" width="8%">
+                                <label>Avoid alcoholic beverages</label>
+                                <img src="./img/IconDisplay.PNG" style="text-align: right;" alt="Best" width="5%">
+                            </div>
+                            <div class="fontOptions col-sm-12 blankSubOptions">
+                                <img src="./img/Avoid2.PNG" style="text-align: right;" alt="Best" width="8%">
+                                <label>Avoid stress</label>
+                                <img src="./img/IconDisplay.PNG" style="text-align: right;" alt="Best" width="5%">
+                            </div>
+                            <div class="fontOptions col-sm-12 blankSubOptions">
+                                <img src="./img/eat.PNG" style="text-align: right;" alt="Best" width="8%">
+                                <label>Eat healthy food</label>
+                                <img src="./img/IconDisplay.PNG" style="text-align: right;" alt="Best" width="5%">
+                            </div>
+                            <div class="fontOptions col-sm-12 blankSubOptions">
+                                <img src="./img/get.PNG" style="text-align: right;" alt="Best" width="8%">
+                                <label>Get enough sleep</label>
+                                <img src="./img/IconDisplay.PNG" style="text-align: right;" alt="Best" width="5%">
+                            </div>
+                            <div class="fontOptions col-sm-12 blankSubOptions">
+                                <img src="./img/exercise.PNG" style="text-align: right;" alt="Best" width="8%">
+                                <label>Exercise or physical</label>
+                                <img src="./img/IconDisplay.PNG" style="text-align: right;" alt="Best" width="5%">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 " style="padding-left: 10%;">
+                            <label class="col-sm-12 subtitulos">Emergency Contact </label>
+                            <div class="col-sm-10 let" style="padding-bottom: 20%;">Contact one of the contacts below if
+                                you or your family feel <br>
+                                unwell and have similar symptoms such as Covid-19, make <br>
+                                sure you also take care of yourself before reporting to us :
+                            </div>
+                            <div class="row">
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-3 blankOp2">
+                                        <div class="row">
+                                            <div class="col-sm-4 optionstyle">
+                                                <img src="./img/iconCall.PNG" alt="mini" width="100%">
+                                            </div>
+                                            <div class="col-sm-4" style="padding-top: 12%;">
+                                                <label class="fontOptions">Call</label>
+                                                <label class="let">021.123.145.14</label>
+                                            </div>
+                                        </div>
+                                        <div class="text-center mt-1 " style="padding-top: 10%;">
+                                            <a class="btn btn-xl btn-outline-light divAzulbtn" href="">
+                                                Call Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 blankOp2">
+                                        <div class="row">
+                                            <div class="col-sm-4 optionstyle">
+                                                <img src="./img/iconChat.PNG" alt="mini" width="100%">
+                                            </div>
+                                            <div class="col-sm-4" style="padding-top: 12%;">
+                                                <label class="fontOptions">Chat</label>
+                                                <label class="let">021.123.145.14</label>
+                                            </div>
+                                        </div>
+                                        <div class="text-center mt-1 " style="padding-top: 10%;">
+                                            <a class="btn btn-xl btn-outline-light divAzulbtn" href="">
+                                                Chat Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-3 blankOp2">
+                                                <div class="row">
+                                                    <div class="col-sm-4 optionstyle">
+                                                        <img src="./img/iconVideo.PNG" alt="mini" width="100%">
+                                                    </div>
+                                                    <div class="col-sm-6" style="padding-top: 12%;">
+                                                        <label class="fontOptions">Video Call</label>
+                                                        <label class="let">021.123.145.14</label>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center mt-1 " style="padding-top: 10%;">
+                                                    <a class="btn btn-xl btn-outline-light divAzulbtn" href="">
+                                                        Video Call Now
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 blankOp2">
+                                                <div class="row">
+                                                    <div class="col-sm-4 optionstyle">
+                                                        <img src="./img/iconMessage.PNG" alt="mini" width="100%">
+                                                    </div>
+                                                    <div class="col-sm-4" style="padding-top: 12%;">
+                                                        <label class="fontOptions">Message</label>
+                                                        <label class="let">021.123.145.14</label>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center mt-1 " style="padding-top: 10%;">
+                                                    <a class="btn btn-xl btn-outline-light divAzulbtn" href="">
+                                                        Message Now
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-5 ">
+                            <img src="./img/doctor.PNG">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer class="footer ">
+        <div class="container">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-6 ">
+                        <label class="col-sm-12 footTituloPal">Vaccination </label>
+                        <div class="col-sm-8 let" style="font-weight: bold;">Our goal is to help the <br>
+                            world free from the <br>
+                            ongoing pandemic
+                        </div>
+                    </div>
+                    <div class="col-sm-2 ">
+                        <label class="col-sm-12 footTitulo">About </label>
+                        <label class="col-sm-12 let">About Us </label>
+                        <label class="col-sm-12 let"> </label>
+                        <label class="col-sm-12 let">Features </label>
+                        <label class="col-sm-12 let"> </label>
+                        <label class="col-sm-12 let">News & Blog </label>
+                    </div>
+                    <div class="col-sm-2 ">
+                        <label class="col-sm-12 footTitulo">Company </label>
+                        <label class="col-sm-12 let">How We Work? </label>
+                        <label class="col-sm-12 let"> </label>
+                        <label class="col-sm-12 let">Capital </label>
+                        <label class="col-sm-12 let"> </label>
+                        <label class="col-sm-12 let">Security </label>
+                    </div>
+                    <div class="col-sm-2 ">
+                        <label class="col-sm-12 footTitulo">Support </label>
+                        <label class="col-sm-12 let">FAQs </label>
+                        <label class="col-sm-12 let"> </label>
+                        <label class="col-sm-12 let">Support Center </label>
+                        <label class="col-sm-12 let"> </label>
+                        <label class="col-sm-12 let">Contact Us </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white" style="z-index: -1;">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <label class="let" style="font-weight: bold;">@2021 Vaccination. All rigths reserver </label>
+                </div>
+                <div class="col-sm-6 ">
+                    <label class="let" style="font-weight: bold; ">Terms & Agreements Privacy Policy
+                    </label>
+                    <div class="recta">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Portfolio Modals-->
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 4-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 5-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 6-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png"
+                                    alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
